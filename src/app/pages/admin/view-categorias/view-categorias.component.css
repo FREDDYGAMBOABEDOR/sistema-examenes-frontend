@@ -1,0 +1,16 @@
+/*.inline-block-div {
+    display: inline-block;
+    margin-right: 100px;
+    /* Puedes ajustar el margen según tus necesidades 
+}*/
+
+
+/*.inline-block-icon {
+    display: inline-block;
+    margin-right: 50px;
+    /* Puedes ajustar el margen según tus necesidades
+}*/
+
+.mdc-list-item.mdc-list-item--with-one-line{
+    padding: 45px;
+}

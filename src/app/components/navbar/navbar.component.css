@@ -1,0 +1,44 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    /* Esto ocultará los elementos que no quepan en el ancho del toolbar */
+}
+
+.menu-icon {
+    margin-right: 10px;
+    color: white;
+}
+
+.toolbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-grow: 1;
+    /* Esto permite que el título ocupe el espacio restante */
+}
+
+.spacer {
+    flex-grow: 1;
+    /* Esto empujará los elementos a la derecha del título al final del toolbar */
+}
+
+.toolbar-button {
+    margin-right: 250px;
+    color: white;
+    text-transform: uppercase;
+    /* Convierte el texto en mayúsculas */
+}
+
+/* Añade estilos específicos para el botón de Cerrar sesión */
+.toolbar-button:last-child {
+    margin-right: 0;
+}

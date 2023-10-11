@@ -1,0 +1,96 @@
+<mat-toolbar color="primary">
+  <a [routerLink]="'/'" mat-icon-button class="menu-icon" aria-label="Menu">
+    <mat-icon>menu_books</mat-icon>
+  </a>
+  <span class="toolbar-title">Portal de exámenes</span>
+  <span class="spacer"></span>
+  <ng-container *ngIf="!isLoggedIn">
+    <a
+      [routerLink]="'/login'"
+      mat-icon-button
+      class="toolbar-button"
+      aria-label="Iniciar sesión"
+    >
+      Iniciar sesión
+    </a>
+    <a
+      [routerLink]="'/signup'"
+      mat-icon-button
+      class="toolbar-button mr20"
+      aria-label="Registrar"
+    >
+      Registrar
+    </a>
+  </ng-container>
+  <ng-container *ngIf="isLoggedIn">
+    <a
+      (click)="logout()"
+      mat-icon-button
+      class="toolbar-button"
+      aria-label="Cerrar sesión"
+    >
+      Cerrar sesión
+    </a>
+    <button
+      mat-button
+      class="toolbar-button"
+      routerLink="/admin/profile"
+      aria-label="Perfil"
+    >
+      {{ user.username }}
+    </button>
+  </ng-container>
+</mat-toolbar>
+
+<!-- <mat-toolbar color="primary">
+  <a
+    [routerLink]="'/'"
+    mat-icon-button
+    class="example-icon"
+    arial-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu_books</mat-icon>
+  </a>
+
+  <span>Portal de exámenes</span>
+  <span class="example-spacer"></span>
+
+  <a
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/login'"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    Iniciar Sesion
+  </a>
+  <a
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/signup'"
+    mat-icon-button
+    class="example-icon favorite-icon mr20 ml70"
+    aria-label="Example icon-button with heart icon"
+  >
+    Registrar
+  </a>
+  <a
+    *ngIf="!isLoggedIn"
+    (click)="logout()"
+    style="margin-right: 50px"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    Cerrar Sesión
+  </a>
+
+  <button
+    *ngIf="isLoggedIn && user"
+    mat-button
+    style="margin-right: 10px"
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    {{ user.username }}
+  </button>
+</mat-toolbar> -->

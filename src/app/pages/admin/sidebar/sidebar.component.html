@@ -1,0 +1,30 @@
+<!--El sidebar que es el menu desplegable debe obligatoriamente estas asociado a app-rounting.module.ts-->
+
+<!--El sidebar que es el menu desplegable debe obligatoriamente estas asociado a app-rounting.module.ts-->
+<mat-card class="custom-card">
+  <mat-action-list class="custom-action-list">
+    <div mat-subheader class="custom-header">Menu</div>
+    <button routerLink="/admin" mat-list-item class="menu-item">
+      <mat-icon mat-list-icon class="icon">home</mat-icon> Inicio
+    </button>
+    <button mat-list-item routerLink="/admin/profile" class="menu-item">
+      <mat-icon mat-list-icon class="icon">account_circle</mat-icon> Perfil
+    </button>
+    <button mat-list-item routerLink="/admin/categorias" class="menu-item">
+      <mat-icon mat-list-icon class="icon">list</mat-icon> Categorías
+    </button>
+    <button mat-list-item routerLink="/admin/add-categorias" class="menu-item">
+      <mat-icon mat-list-icon class="icon">add_circle_outline</mat-icon> Agregar
+      categoría
+    </button>
+    <button mat-list-item routerLink="/admin/examenes" class="menu-item">
+      <mat-icon mat-list-icon class="icon">quiz</mat-icon> Cuestionarios
+    </button>
+    <button mat-list-item routerLink="/admin/add-examen" class="menu-item">
+      <mat-icon mat-list-icon class="icon">add</mat-icon> Agregar cuestionario
+    </button>
+    <button mat-list-item (click)="logout()" class="menu-item">
+      <mat-icon mat-list-icon class="icon">logout</mat-icon> Salir
+    </button>
+  </mat-action-list>
+</mat-card>
